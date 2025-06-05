@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Músicas Favoritas</title>
+  <link rel="stylesheet" href="pagina web/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background"></div>
+
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="navbar-logo">
+      <img src="pagina web/imagenes/logo.jpg" alt="Logo del sitio" />
+      <span>Mis Artistas Favoritos</span>
+    </div>
+    <nav class="navbar-links">
+      <a href="#drake">Drake</a>
+      <a href="#badbunny">Bad Bunny</a>
+      <a href="#ariana">Ariana Grande</a>
+      <button id="toggle-theme" class="theme-button">🌞 Modo Claro</button>
+    </nav>
+  </header>
+
+  <!-- Sección Drake -->
+  <div class="container" id="drake">
+    <div class="text-section">
+      <h1><span>Drake Graham</span></h1>
+      <h2>Mis músicas favoritas de este artista:</h2>
+
+      <section class="song">
+        <h3>Passionfruit</h3>
+        <p>Una canción con un ritmo relajado y tropical, ideal para escuchar en días tranquilos.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/passionfruit.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Eres mía</h3>
+        <p>Una colaboración icónica entre Drake y Bad Bunny, que mezcla inglés y español.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/mia.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Toosie Slide</h3>
+        <p>Una canción viral con su propio paso de baile, famosa en redes sociales.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/toosie-slide.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <p>Drake Graham, conocido artísticamente como Drake, es un rapero, cantante y compositor canadiense...</p>
+    </div>
+    <div class="image-section">
+      <img src="pagina web/imagenes/drake.jpg" alt="Drake">
+    </div>
+  </div>
+
+  <!-- Sección Bad Bunny -->
+  <div class="container" id="badbunny">
+    <div class="text-section">
+      <h1><span>Bad Bunny</span></h1>
+      <h2>Mis músicas favoritas de este artista:</h2>
+
+      <section class="song">
+        <h3>Callaita</h3>
+        <p>Canción nostálgica del 2019, perfecta para levantar el ánimo.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/callaita.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Moscow Mule</h3>
+        <p>Ritmos suaves y relajados con estilo romántico playero.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/moscow-mule.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Dakiti</h3>
+        <p>Éxito internacional con un beat moderno y letras sensuales.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/dakiti.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <p>Bad Bunny es un artista puertorriqueño conocido por revolucionar el reguetón y trap latino...</p>
+    </div>
+    <div class="image-section">
+      <img src="pagina web/imagenes/badbunny.jpg" alt="Bad Bunny">
+    </div>
+  </div>
+
+  <!-- Sección Ariana Grande -->
+  <div class="container" id="ariana">
+    <div class="text-section">
+      <h1><span>Ariana Grande</span></h1>
+      <h2>Mis músicas favoritas de esta artista:</h2>
+
+      <section class="song">
+        <h3>Into You</h3>
+        <p>Una canción pop sensual y energética, del álbum "Dangerous Woman".</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/intoyou.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Positions</h3>
+        <p>Una mezcla elegante de pop y R&B donde Ariana canta sobre amor y compromiso.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/positions.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="song">
+        <h3>Side to Side</h3>
+        <p>Colaboración con Nicki Minaj, con ritmos caribeños y un toque provocativo.</p>
+        <video width="600" height="340" controls>
+          <source src="pagina web/videos/sidetoside.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <p>Ariana Grande es una cantante, actriz y compositora estadounidense, reconocida por su rango vocal impresionante y su éxito global en el pop...</p>
+    </div>
+    <div class="image-section">
+      <img src="pagina web/imagenes/arianagrande.jpg" alt="Ariana Grande">
+    </div>
+  </div>
+
+  <!-- Script para tema claro/oscuro -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+
+      if (body.classList.contains("light-theme")) {
+        toggleBtn.textContent = "🌙 Modo Oscuro";
+      } else {
+        toggleBtn.textContent = "🌞 Modo Claro";
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <p>© 2023 Mis Músicas Favoritas. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
